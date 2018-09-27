@@ -25,7 +25,8 @@ public:
     if (n < results_.size()) {
       return results_[n];
     }
-    return (*this)(n-2) + (*this)(n-1);
+    results_.push_back((*this)(n-2) + (*this)(n-1));
+    return results_.back();
   }
 private:
   std::vector<T> results_;
