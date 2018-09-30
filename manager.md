@@ -3,7 +3,7 @@ The manager has *N* sequential memory slots numbered 1 to *N*. The task is to pa
 'Allocate' query has one parameter *K* - how many sequential slots to allocate. The manager has to do it in case it is possible.
 The manager has to choose the longest free block of memory available. Among the longest - choose the first one.
 In case allocating is not possible - deny the query.  
-'Free' query has on parameter *T* - free memory allocated for the query nubmer *T* (numbering starts with 1). It is guranteed that
+'Free' query has one parameter *T* - free memory allocated for the query nubmer *T* (numbering starts with 1). It is guranteed that
 query number *T* was 'allocate' type without any 'free *T*' query yet. If the query nubmer *T* was denied, deny this one as well.
 
 The first line of the input contains two integers *N* and *M* - size of the memory and number of queries
