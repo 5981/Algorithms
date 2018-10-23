@@ -8,6 +8,9 @@ std::default_random_engine generator;
 std::uniform_int_distribution<long long> distribution(1, PRIME / 4);
 
 
+// get hash for x,y pair
+// Hash hash; hash.random(N); hash(x,y);
+// 0 <= x,y <= 1
 class Hash {
 private:
   long long paramA, paramB, paramC;
@@ -16,7 +19,7 @@ public:
   void set(const long long ParamA,
            const long long ParamB,
            const long long ParamC,
-	   const int Size) {
+	   	   const int Size) {
     paramA = ParamA;
     paramB = ParamB;
     paramC = ParamC;
@@ -25,10 +28,10 @@ public:
   void random(const int Size) {
     set(distribution(generator), distribution(generator), distribution(generator), Size);
   }
-  int operator()(const double a, const double b) const {
-    return ( (paramA * static_cast<int>(INFTY * a) +
-	      paramB * static_cast<int>(INFTY * b) +
-	      paramC) % PRIME ) % size;
+  int operator()(const double x, const double y) const {
+    return ( (paramA * static_cast<int>(INFTY * x) +
+	      	  paramB * static_cast<int>(INFTY * y) +
+	      	  paramC) % PRIME ) % size;
   }
 };
 
