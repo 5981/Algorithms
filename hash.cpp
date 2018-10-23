@@ -14,9 +14,9 @@ private:
   int size;
 public:
   void set(const long long ParamA,
-		   const long long ParamB,
-		   const long long ParamC,
-		   const int Size) {
+           const long long ParamB,
+           const long long ParamC,
+	   const int Size) {
     paramA = ParamA;
     paramB = ParamB;
     paramC = ParamC;
@@ -27,8 +27,8 @@ public:
   }
   int operator()(const double a, const double b) const {
     return ( (paramA * static_cast<int>(INFTY * a) +
-			  paramB * static_cast<int>(INFTY * b) +
-			  paramC) % PRIME ) % size;
+	      paramB * static_cast<int>(INFTY * b) +
+	      paramC) % PRIME ) % size;
   }
 };
 
