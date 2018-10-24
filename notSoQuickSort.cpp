@@ -33,6 +33,7 @@ int main() {
 
 template <typename RandomAccessIterator, typename Less>
 void notSoQuickSort(const RandomAccessIterator begin, const RandomAccessIterator end, Less less) {
+  typename RandomAccessIterator::value_type pivot = *begin;
   for (RandomAccessIterator it = begin; it < end; ++it) {
     if (less(*it, *begin)) {
       std::swap(*it, *begin);
