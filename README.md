@@ -40,7 +40,7 @@ The first line of the input contains the number *n*. The following *n* lines con
 Time complexity: O(n)
 
 ### 4. AVL Tree
-Create a class defining [AVL Tree](https://en.wikipedia.org/wiki/AVL_tree). Define the following operations: insert, get, delete, print.
+Create a class defining [AVL Tree](https://en.wikipedia.org/wiki/AVL_tree). Define the following operations: insert, get, erase, print.
 
 ### 5. Bonus
 Create calculator interpreter. It should accept a single line containing only the following symbols:  
